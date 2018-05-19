@@ -34,7 +34,7 @@ const createApiSpec = (model, resourceName, newResource) => {
 
     describe(`GET ONE /${resourceName}`, () => {
       it(`should get one ${resourceName}`, async () => {
-        
+        const newDoc = await model.create(newResource);
       })
     })
 
