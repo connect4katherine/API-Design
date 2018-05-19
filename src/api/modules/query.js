@@ -8,6 +8,7 @@ export const controllers = {
   },
 
   updateOne(docToUpdate, update) {
+    merge(docToUpdate, update);
     return docToUpdate.save();
   },
 
