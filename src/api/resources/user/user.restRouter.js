@@ -9,6 +9,9 @@ userRouter.route('/')
   .get(userController.getAll)
   .post(userController.createOne)
 
+userRouter.route('/find/:id')
+  .get(userController.findOne)
+
 userRouter.route('/:id')
   .get(userController.getOne)
   .put(userController.updateOne)

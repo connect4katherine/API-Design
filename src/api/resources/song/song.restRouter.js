@@ -9,6 +9,9 @@ songRouter.route('/')
   .get(songController.getAll)
   .post(songController.createOne)
 
+songRouter.route('/find/:id')
+  .get(songController.findOne)
+
 songRouter.route('/:id')
   .get(songController.getOne)
   .put(songController.updateOne)

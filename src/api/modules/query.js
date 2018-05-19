@@ -16,6 +16,11 @@ export const controllers = {
     return docToDelete.remove();
   },
 
+  findOne(model, id) {
+    console.log('id in query', id);
+    return model.findOne({_id: id})
+  },
+
   getOne(docToGet) {
     return Promise.resolve(docToGet)
   },
@@ -56,6 +61,13 @@ export const getOne = (model) => (req, res, next) => {
     .catch(error => next(error))
 }
 
+export const findOne = (model) => (req, res, next, id) => {
+  const findId = id || req.params.id;
+  return controllers.findOne(model, findId)
+    .then(doc => res.json(doc))
+    .catch(error => next(error))
+}
+
 export const getAll = (model) => (req, res, next) => {
   return controllers.getAll(model)
     .then(docs => res.json(docs))
@@ -83,6 +95,7 @@ export const generateControllers = (model, overrides = {}) => {
     findByParam: findByParam(model),
     getAll: getAll(model),
     getOne: getOne(model),
+    findOne: findOne(model),
     deleteOne: deleteOne(model),
     updateOne: updateOne(model),
     createOne: createOne(model)

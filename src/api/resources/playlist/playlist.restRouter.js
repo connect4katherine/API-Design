@@ -9,6 +9,9 @@ playlistRouter.route('/')
   .get(playlistController.getAll)
   .post(playlistController.createOne)
 
+playlistRouter.route('/find/:id')
+  .get(playlistController.findOne)
+
 playlistRouter.route('/:id')
   .get(playlistController.getOne)
   .put(playlistController.updateOne)

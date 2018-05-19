@@ -33,14 +33,12 @@ const createApiSpec = (model, resourceName, newResource) => {
     })
 
     describe(`GET ONE /${resourceName}`, () => {
-      it.only(`should get one ${resourceName}`, async () => {
+      it(`should get one ${resourceName}`, async () => {
         const newDoc = await model.create(newResource);
-        console.log(newDoc);
 
         const result = await chai.request(app)
-        .get(`/api/${resourceName}/${newDoc.id}`)
+        .get(`/api/${resourceName}/find/${newDoc._id}`)
         .set('Authorization', `Bearer ${jwt}`)
-        console.log(result);
 
         expect(result).to.have.status(200)
         expect(result).to.be.json
