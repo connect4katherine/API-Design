@@ -89,7 +89,7 @@ export const verifyUser = () => (req, res, next) => {
 
 export const signToken = (id) => jwt.sign(
   {id},
-  jwtSecret,
+  appConfig.secrets.JWT_SECRET,
   {expiresIn: '30d'}
 )
 
