@@ -1,9 +1,10 @@
 import { User } from '../resources/user/user.model'
 import jwt from 'jsonwebtoken'
+import appConfig from '../../config'
 import expressJwt from 'express-jwt'
-const jwtSecret = 'blueRhinoJumps'
 
-const checkToken = expressJwt({ secret: jwtSecret })
+
+const checkToken = expressJwt({ secret: appConfig.secrets.JWT_SECRET })
 const disableAuth = false
 
 export const signin = (req, res, next) => {

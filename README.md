@@ -1,32 +1,33 @@
 # Front End Masters: API Design with Node V2
 > Learn to build with Node, Express, Mongo, and GraphQL
-# API Design with Node V2
+https://github.com/FrontendMasters/api-design-node-v2
 
+# API Design with Node V2
 ## REST &amp; GraphQL API Design in Node.js, v2 (using Express &amp; MongoDB)
 1. Introduction
 1. Intro to Express
-1. Exercise: Setup Express
+1. Exercise: Setup Express 
 1. Solution: Setup Express
 1. Solution Branch Walkthrough
 1. Routing with Express
 1. Excercise: Express Routing
 1. Solution: Express Routing
 1. Controllers &amp; Responding
-1. Exercise: Controllers &amp; Responding
+1. Exercise: Controllers &amp; Responding 
 1. Solution: Controllers &amp; Responding
 1. Middleware
-1. Exercise: Middleware
+1. Exercise: Middleware 
 1. Solution: Middleware
 1. MongoDB Introduction
 1. Setup Mongo Models with Mongoose
-1. Exercise: MongoDB Models
+1. Exercise: MongoDB Models 
 1. Solution: MongoDB Models
 1. CRUD in the Controllers
 1. Challenge: Querying MongoDB
 1. Solution: Querying MongoDB
 1. Dynamic Configuration
-1. Exercise: Dynamic Config
-1. Solution: Dynamic Config
+1. Exercise: Dynamic Config 
+1. Solution: Dynamic Config ✔️
 1. Writing Tests
 1. GraphQL Overview
 1. GraphQL vs REST

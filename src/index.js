@@ -1,15 +1,17 @@
 import http from 'http'
 // import { execute, subscribe } from 'graphql'
 import { createServer } from 'http'
-
+import appConfig from './config'
 import app from './server'
 // import schema from './schema'
+
+console.log(appConfig);
 
 const server = http.createServer(app)
 let currentApp = app
 
-server.listen(3000, () => {
-	console.log('Server listening on port 3000')
+server.listen(appConfig.port, () => {
+	console.log('Server listening');
 })
 
 if (module.hot) {
