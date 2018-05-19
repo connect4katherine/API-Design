@@ -6,6 +6,7 @@ import app from './server'
 // import schema from './schema'
 
 console.log(appConfig);
+console.log(process.env.MONGODB_URI);
 
 const server = http.createServer(app)
 let currentApp = app

@@ -2,6 +2,11 @@
 > Learn to build with Node, Express, Mongo, and GraphQL
 https://github.com/FrontendMasters/api-design-node-v2
 
+http://localhost:3000/
+http://localhost:3000/song
+http://localhost:3000/playlist
+http://localhost:3000/user
+
 # API Design with Node V2
 ## REST &amp; GraphQL API Design in Node.js, v2 (using Express &amp; MongoDB)
 1. Introduction
