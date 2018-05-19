@@ -13,7 +13,7 @@ export const controllers = {
   },
 
   deleteOne(docToDelete) {
-    return docToGet.remove();
+    return docToDelete.remove();
   },
 
   getOne(docToGet) {
