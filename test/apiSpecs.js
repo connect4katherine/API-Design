@@ -24,8 +24,8 @@ const createApiSpec = (model, resourceName, newResource) => {
     describe(`GET /${resourceName}`, () => {
       it(`should get all ${resourceName}`, async () => {
         const result = await chai.request(app)
-          .get(`/api/${resourceName}`)
-          .set('Authorization', `Bearer ${jwt}`)
+        .get(`/api/${resourceName}`)
+        .set('Authorization', `Bearer ${jwt}`)
 
         expect(result).to.have.status(200)
         expect(result).to.be.json
@@ -33,17 +33,26 @@ const createApiSpec = (model, resourceName, newResource) => {
     })
 
     describe(`GET ONE /${resourceName}`, () => {
-      it(`should get one ${resourceName}`, async () => {
+      it.only(`should get one ${resourceName}`, async () => {
         const newDoc = await model.create(newResource);
+        console.log(newDoc);
+
+        const result = await chai.request(app)
+        .get(`/api/${resourceName}/${newDoc.id}`)
+        .set('Authorization', `Bearer ${jwt}`)
+        console.log(result);
+
+        expect(result).to.have.status(200)
+        expect(result).to.be.json
       })
     })
 
     describe(`POST /${resourceName}`, () => {
       it(`should create a ${resourceName}`, async () => {
         const result = await chai.request(app)
-          .post(`/api/${resourceName}`)
-          .set('Authorization', `Bearer ${jwt}`)
-          .send(newResource)
+        .post(`/api/${resourceName}`)
+        .set('Authorization', `Bearer ${jwt}`)
+        .send(newResource)
 
         expect(result).to.have.status(201)
         expect(result).to.be.json
