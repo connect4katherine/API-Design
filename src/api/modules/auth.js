@@ -3,8 +3,8 @@ import jwt from 'jsonwebtoken'
 import appConfig from '../../config'
 import expressJwt from 'express-jwt'
 
-console.log('ENV', process.env.NODE_ENV)
-console.log('APP CONFIG', appConfig);
+// console.log('ENV', process.env.NODE_ENV)
+// console.log('APP CONFIG', appConfig);
 const checkToken = expressJwt({ secret: appConfig.secrets.JWT_SECRET })
 const disableAuth = false
 
