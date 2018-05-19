@@ -32,6 +32,12 @@ const createApiSpec = (model, resourceName, newResource) => {
       })
     })
 
+    describe(`GET ONE /${resourceName}`, () => {
+      it(`should get one ${resourceName}`, async () => {
+        
+      })
+    })
+
     describe(`POST /${resourceName}`, () => {
       it(`should create a ${resourceName}`, async () => {
         const result = await chai.request(app)

@@ -27,8 +27,8 @@ https://github.com/FrontendMasters/api-design-node-v2
 1. Solution: Querying MongoDB
 1. Dynamic Configuration
 1. Exercise: Dynamic Config 
-1. Solution: Dynamic Config ✔️
-1. Writing Tests
+1. Solution: Dynamic Config 
+1. Writing Tests ✔️
 1. GraphQL Overview
 1. GraphQL vs REST
 1. GraphQL Schemas
